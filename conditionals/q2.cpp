@@ -1,12 +1,14 @@
-this is my first cpp program in git push 
+//     // Given three positive integers as X, Y and Z representing three sides of a triangle, write a program that determines whether the triangle formed by the sides exist or not. If the triangle exists, classify it as isosceles, scalene or equilateral.
 
-hello world
+// Condition for valid Triangle:
+// Sum of any two of its sides should be greater than the third side
+
 #include<iostream>
 using namespace std;
 
 int main(){
     int x,y,z;
-    cout<<"enter the sides" << endl;
+
     cin>> x >> y >> z;
     if(x+y>z && y+z>x && x+z>y ){
         cout<<"triangle is possible"<< endl ;
