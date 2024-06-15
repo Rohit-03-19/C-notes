@@ -1,16 +1,14 @@
 #include <iostream>
-#include <vector>
-#include <string>
-
 using namespace std;
 
-int main()
-{
-    vector<string> msg {"Rohit", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
-    {
-        cout << word << " ";
+int main() {
+    int a, i;
+    cout << "Enter the number for which you want the multiples: " << endl;
+    cin >> a;
+    i = 1;
+    while (i <= 10) {
+        cout << i << " * " << a << " = " << i * a << endl;
+        i++;
     }
-    cout << endl;
+    return 0;
 }
