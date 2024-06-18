@@ -35,16 +35,16 @@ int main(){
             cout<<" ";
             j--;
         }
-        // int k=1;
-        // while(k<=i){
-        //     cout<<"*";
-        //     k++;
-        // }
-        // k=i-1;
-        // while(k>=1){
-        //     cout<<"*";
-        //     k--;
-        // }
+        int k=1;
+        while(k<=i){
+            cout<<"*";
+            k++;
+        }
+        k=i-1;
+        while(k>=1){
+            cout<<"*";
+            k--;
+        }
         cout<<endl;
         i++;
     }
