@@ -10,7 +10,6 @@
 
 #include<iostream>
 using namespace std;
-K
 int main()
 {
     char testchar;
