@@ -31,7 +31,6 @@ int main() {
         N /= 2;
         position *= 10;
     }
-
     cout << binary << endl;
 
     return 0;
