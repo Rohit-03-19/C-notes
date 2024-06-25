@@ -24,7 +24,7 @@ int main(){
     cin>>N;
     for (int i=1; i<=N;i++){
         for(int j=i; j>0;j--){
-            cout<<char(70-j);
+            cout<<char(64+N-j);
         }
         cout<<endl;
     }
