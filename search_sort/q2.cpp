@@ -26,39 +26,45 @@
 // Time Limit: 1 sec
 
 
-#include<cmath>
-#include <climits>
+#include<iostream>
+using namespace std;
 
-int binarySearchClosest(int arr[], int left, int right, int target)
-{
-    //Write your code here
-    int closestIndex = -1;
-    int minDiff = INT_MAX;
-
-    // Perform binary search
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-
-        // Update closest element and minimum difference if the current element is closer to the target
-        int diff = abs(arr[mid] - target);
-        if (diff < minDiff) {
-            minDiff = diff;
-            closestIndex = mid;
+void closest(int a[], int n, int target){
+    int start=0,end=n-1,mid=0;
+    int left=0,right=target;
+    while(start<=end){
+        mid=(start+end)/2;
+        if(a[mid]==target){
+            cout<<"The positon is:- "<<mid<<endl;
+            break;
         }
-
-        // If the current element is less than the target, move right
-        if (arr[mid] < target) {
-            left = mid + 1;
+        else if(a[mid]<target){
+            start=mid+1;
+            mid=(start+end)/2;
+            left=a[start];
+            if(left<target){
+                cout<<"The positon is:- "<<start;
+            }
         }
-        // If the current element is greater than the target, move left
-        else if (arr[mid] > target) {
-            right = mid - 1;
-        }
-        // If the current element is equal to the target, return its index
-        else {
-            return mid;
+        else if(a[mid]>target){
+            end=mid-1;
+            mid=(start+end)/2;
         }
     }
+}
 
-    return closestIndex;
+int main(){
+    int n;
+    int target;
+    int a[100000];
+    cout<<"Enter nuber of elements array contain"<<endl;
+    cin>>n;
+    cout<<"Enter the values of array:- "<<endl;
+    for(int i= 0; i<n ;i++){
+        cin>>a[i];
+    }
+    cout<<"enter the target value:- "<<endl;
+    cin>>target;
+    closest(a , n ,target );
+
 }
